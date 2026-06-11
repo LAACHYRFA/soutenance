@@ -1,0 +1,23 @@
+/* 1. بدل لون الـ border باش يجي خفيف ومناسب للـ Dark Mode */
+.reservation-container .actions {
+    margin-top: 25px;
+    text-align: center;
+    border-top: 1px solid #333; /* بدلت #eee بـ #333 داكن */
+    padding-top: 15px;
+}
+
+
+/* 2. بدلي لون الـ annuler لرمادي فاتح باش يبان وسط الخلفية الداكنة */
+.link-annuler {
+    color: red; /* كان #555، رديته رمادي باين */
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.link-logout{
+ color: red;
+ text-decoration: none;
+ font-size:14px ;
+ padding:5px 10px;
+}

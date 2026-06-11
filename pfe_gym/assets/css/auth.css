@@ -1,0 +1,126 @@
+body {
+    background-color: #111111;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+
+
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card */
+.custom-card {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Form */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Inputs */
+input {
+    all: unset;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 14px;
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 0.95em;
+    box-sizing: border-box;
+}
+
+.input-field:focus {
+    border-color: #FF0000;
+}
+
+/* Button */
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background: #FF0000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #cc0000;
+}
+
+/* Link */
+.custom-card p {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+.custom-card a {
+    color: #FF0000;
+    text-decoration: none;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* باش الكلام يجي جهة اليسار */
+    gap: 5px;         /* مسافة صغيرة بين الـ label والـ input */
+}
+
+label {
+    font-size: 0.85em;
+    color: #cccccc;   /* لون رمادي خفيف باش ما يغلبش على الـ input */
+    font-weight: 500;
+}
+
+
+
+/* auth.css - التجاوب */
+@media (max-width: 600px) {
+    .auth-form {
+        gap: 10px !important; /* كنقصو المسافة شوية باش كلشي يبان */
+    }
+    
+    .input-field, .btn-submit {
+        /* في التلفون، كنعطيوهم عرض 100% باش يسهل الضغط عليهم */
+        width: 100% !important;
+        max-width: none !important; 
+    }
+}
