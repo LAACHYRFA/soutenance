@@ -80,8 +80,6 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
 .btn-submit:hover {
