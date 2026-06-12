@@ -33,32 +33,16 @@ if (isset($_POST['confirmer'])) {
     /* Vérification de la validité de l'abonnement */
     if ($id_ab !== false && $id_ab > 0) {
 
-        try {
+        /* Insertion de la réservation */
+        $stmt = $pdo->prepare("INSERT INTO reservation (id_utilisateur, id_ab, date_reservation) VALUES (?, ?, NOW())");
+        $stmt->execute([$id_user, $id_ab]);
 
-            /* Insertion de la réservation dans la base de données */
-            $stmt = $pdo->prepare("
-                INSERT INTO reservation
-                (id_utilisateur, id_ab, date_reservation)
-                VALUES (?, ?, NOW())
-            ");
+        /* Suppression de l'abonnement de la session */
+        unset($_SESSION['id_abonnement']);
 
-            $stmt->execute([$id_user, $id_ab]);
-
-            /* Suppression de l'abonnement de la session */
-            unset($_SESSION['id_abonnement']);
-
-            /* Message de confirmation et redirection */
-            echo "<script>
-                    alert('Réservation enregistrée avec succès !');
-                    window.location.href='index.php';
-                  </script>";
-            exit();
-
-        } catch (PDOException $e) {
-
-            $error = "Erreur lors de l'enregistrement de la réservation.";
-
-        }
+        /* Redirection */
+        header("Location: index.php");
+        exit();
 
     } else {
 
