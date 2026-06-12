@@ -53,21 +53,28 @@ $abonnements = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="pricing-grid">
 
          <?php
-        if ($abonnements) {
-            foreach ($abonnements as $item) {
-                $desc = str_replace(',', '<br>', htmlspecialchars($item['description']));
-                echo "<div class='custom-card pricing-card'>
-                        <h3>" . htmlspecialchars($item['nom']) . "</h3>
-                        <div class='card-price'>" . htmlspecialchars($item['prix_total']) . " 💲</div>
-                        <p class='card-duration'>📅 Durée: " . htmlspecialchars($item['duree']) . "</p>
-                        <p class='card-desc'>$desc</p>
-                     <a href='signup.php?id_ab=" . $item['id_ab'] . "' class='btn-submit'>Réserver</a>            }
-        } else {
-            echo "<p style='text-align:center; grid-column: 1/-1;'>Aucun abonnement disponible pour le moment.</p>";
-        }
-        ?>
+        
+if ($abonnements) {
+    foreach ($abonnements as $item) {
+        $desc = str_replace(',', '<br>', htmlspecialchars($item['description']));
+
+        echo "
+        <div class='custom-card pricing-card'>
+            <h3>" . htmlspecialchars($item['nom']) . "</h3>
+            <div class='card-price'>" . htmlspecialchars($item['prix_total']) . " 💲</div>
+            <p class='card-duration'>📅 Durée: " . htmlspecialchars($item['duree']) . "</p>
+            <p class='card-desc'>$desc</p>
+            <a href='signup.php?id_ab=" . $item['id_ab'] . "' class='btn-submit'>Réserver</a>
+        </div>
+        ";
+    }
+} else {
+    echo "<p style='text-align:center; grid-column: 1/-1;'>Aucun abonnement disponible pour le moment.</p>";
+}
+?>
 
     </div>
+    
 </div>
  
     <div class="container">
