@@ -1,0 +1,104 @@
+/* ==========================================================
+   GRILLES : Mise en page des conteneurs
+   ========================================================== */
+
+/* Grille principale pour les cartes générales */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* Grille spécifique pour les abonnements (Pricing) */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* ==========================================================
+   CARTES : Style visuel des éléments (Custom Card)
+   ========================================================== */
+
+/* Style général de la carte */
+.custom-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    text-align: center;
+    display: flex; /* Utilisation de Flexbox pour organiser le contenu */
+    flex-direction: column; /* Organisation verticale */
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    max-width: 340px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Style de l'image à l'intérieur de la carte */
+.custom-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain; /* L'image garde ses proportions */
+    background: #151515;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+/* ==========================================================
+   TYPOGRAPHIE ET DÉTAILS
+   ========================================================== */
+
+.custom-card h3 {
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Label de spécialité (rouge vif) */
+.custom-card .card-spec {
+    color: #FF0000;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.custom-card p {
+    color: #ccc;
+    font-size: 13px;
+}
+
+/* Prix mis en évidence */
+.card-price {
+    font-size: 24px;
+    color: #FF0000;
+    font-weight: bold;
+}
+
+/* Description avec retour à la ligne automatique */
+.card-desc {
+    color: #ccc;
+    font-size: 14px;
+    white-space: pre-line;
+    line-height: 1.6;
+}
+
+/* ==========================================================
+   COMPOSANTS : Flexibilité des cartes d'abonnement
+   ========================================================== */
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Force le bouton à rester en bas de la carte */
+.pricing-card .btn-submit {
+    margin-top: auto;
+}

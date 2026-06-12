@@ -1,0 +1,125 @@
+/* =========================
+   STYLE GLOBAL DU BODY
+========================= */
+body {
+    background-color: #111111; /* Fond sombre */
+    font-family: Arial, sans-serif; /* Police principale */
+    color: #ffffff; /* Couleur du texte */
+}
+
+/* =========================
+   RESET HTML / BODY
+========================= */
+html, body {
+    height: 100%; /* Prendre toute la hauteur */
+    margin: 0; /* Supprimer les marges par défaut */
+    padding: 0; /* Supprimer les espacements par défaut */
+}
+
+/* =========================
+   CONTENEUR PRINCIPAL
+========================= */
+.container {
+    padding: 40px 20px; /* Espacement intérieur */
+    max-width: 1200px; /* Largeur maximale */
+    margin: auto; /* Centrer horizontalement */
+    min-height: 100vh; /* Prendre toute la hauteur de l’écran */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Alignement vertical */
+    justify-content: center; /* Centrer verticalement */
+    align-items: center; /* Centrer horizontalement */
+}
+
+/* =========================
+   CARTE DE CONNEXION
+========================= */
+.custom-card {
+    background: #1a1a1a; /* Fond gris foncé */
+    padding: 30px; /* Espacement intérieur */
+    border-radius: 10px; /* Coins arrondis */
+    border: 1px solid #333; /* Bordure fine */
+    width: 100%; /* Largeur totale */
+    max-width: 400px; /* Largeur maximale */
+    text-align: center; /* Texte centré */
+}
+
+/* =========================
+   FORMULAIRE
+========================= */
+.auth-form {
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Alignement vertical */
+    gap: 12px; /* Espace entre les éléments */
+    width: 100%; /* Largeur totale */
+    margin-top: 20px; /* Espace en haut */
+}
+
+/* =========================
+   INPUT GLOBAL RESET
+========================= */
+input {
+    all: unset; /* Supprime tous les styles par défaut */
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* =========================
+   CHAMPS DE SAISIE
+========================= */
+.input-field {
+    width: 100%; /* Largeur complète */
+    padding: 10px 14px; /* Espacement intérieur */
+    background: #222; /* Fond sombre */
+    border: 1px solid #444; /* Bordure grise */
+    border-radius: 6px; /* Coins arrondis */
+    color: #fff; /* Texte blanc */
+    font-size: 0.95em; /* Taille du texte */
+    box-sizing: border-box;
+}
+
+/* =========================
+   BOUTON DE CONNEXION
+========================= */
+.btn-submit {
+    width: 100%; /* Largeur complète */
+    padding: 10px; /* Espacement intérieur */
+    background: #FF0000; /* Couleur rouge */
+    color: #fff; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    border-radius: 6px; /* Coins arrondis */
+    font-size: 1em; /* Taille du texte */
+}
+
+/* =========================
+   TEXTE ET LIENS
+========================= */
+.custom-card p {
+    margin-top: 15px; /* Espace en haut */
+    font-size: 0.9em; /* Taille du texte */
+    color: #fff; /* Couleur blanche */
+}
+
+.custom-card a {
+    color: #FF0000; /* Couleur rouge */
+    text-decoration: none; /* Pas de soulignement */
+}
+
+/* =========================
+   GROUPE DE FORMULAIRE
+========================= */
+.form-group {
+    display: flex;
+    flex-direction: column; /* Label au-dessus input */
+    text-align: left; /* Alignement à gauche */
+    gap: 5px; /* Espace entre label et input */
+}
+
+/* =========================
+   LABELS
+========================= */
+label {
+    font-size: 0.85em; /* Petite taille */
+    color: #cccccc; /* Gris clair */
+    font-weight: 500; /* Épaisseur moyenne */
+}

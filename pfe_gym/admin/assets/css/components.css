@@ -1,0 +1,77 @@
+/* ==========================================================
+   DASHBOARD CARDS : Mise en page des cartes statistiques
+   ========================================================== */
+
+/* Conteneur principal qui regroupe toutes les cartes */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styles communs pour les cartes (Dashboard et Coachs) */
+.card, .coach-card {
+    background-color: #1a1a1a;
+    border: 1px solid #252525;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Effet visuel au survol de la souris */
+.card:hover {
+    border-color: #444;
+}
+
+/* ==========================================================
+   BOUTONS : Style des éléments interactifs
+   ========================================================== */
+
+/* Bouton principal de soumission du formulaire */
+.btn-submit {
+    background-color: #FF0000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 180px;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+}
+
+/* Conteneur pour grouper les boutons d'action (ex: Modifier/Supprimer) */
+.btn-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+/* Liens d'action spécifiques */
+.btn-edit, .btn-supprimer {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Couleurs spécifiques pour l'édition et la suppression */
+.btn-edit { color: #0077ff; }
+.btn-supprimer { color: #cc0000; }
+
+/* ==========================================================
+   MÉDIAS : Gestion des images
+   ========================================================== */
+
+/* Assure que toutes les images s'adaptent à leur conteneur parent */
+img {
+    max-width: 100%;
+    height: auto;
+}

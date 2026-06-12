@@ -1,0 +1,153 @@
+/* =========================
+   CONFIGURATION GLOBALE
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+/* =========================
+   FORMULAIRES
+========================= */
+
+/* Section contenant le formulaire ou le tableau avec un style sombre */
+.form-section,
+.table-section {
+    background-color: #1a1a1a;
+    border: 1px solid #252525;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Grille pour organiser les champs en deux colonnes */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Permet à un élément de prendre toute la largeur de la grille */
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Conteneur pour chaque champ de saisie */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Style des champs de saisie (Input, Textarea, Select) */
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    background-color: #111111;
+    color: #ffffff;
+    border: 1px solid #252525;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 14px;
+}
+
+/* Hauteur spécifique pour les zones de texte */
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Effet au survol/clic sur les champs */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #ff0000;
+    outline: none;
+}
+
+/* =========================
+   BOUTONS
+========================= */
+
+/* Style du bouton de validation */
+.btn-submit {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+}
+
+/* Style du lien d'annulation */
+.btn-cancel {
+    display: inline-block;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* =========================
+   TABLEAU
+========================= */
+
+/* Conteneur pour permettre le défilement horizontal sur mobile */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.data-table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+}
+
+/* Style des en-têtes du tableau */
+.data-table th {
+    background-color: #111111;
+    color: #999;
+    padding: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+/* Style des cellules du tableau */
+.data-table td {
+    padding: 15px;
+    border-top: 1px solid #252525;
+}
+
+/* Effet de survol sur les lignes du tableau */
+.data-table tr:hover {
+    background-color: #222;
+}
+
+/* Boutons d'actions dans le tableau */
+.btn-edit {
+    color: #00a2ff;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.btn-supprimer {
+    color: #ff3333;
+    text-decoration: none;
+    font-weight: bold;
+}
