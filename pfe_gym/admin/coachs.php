@@ -281,13 +281,10 @@ $coachs = $pdo->query("
                         <td>{$c['telephone']}</td>
 
                         <!-- Actions -->
-                       <td>
-                                <a href="?action=modifier&id=<?= $c['id_coach'] ?>" class="btn-edit">Modifier</a>
-                                <a href="?action=supprimer&id=<?= $c['id_coach']?>" class="btn-supprimer">Supprimer</a>
-                            </td>
-
-                    </tr>";
-
+                      <td>
+        <a href='?action=modifier&id={$c['id_coach']}' class='btn-edit'>Modifier</a>
+        <a href='?action=supprimer&id={$c['id_coach']}' class='btn-supprimer' onclick='return confirm(\"Supprimer ?\")'>Supprimer</a>
+    </td>
                     </tr>";
                 }
                 ?>
