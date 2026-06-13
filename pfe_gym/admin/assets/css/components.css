@@ -22,10 +22,7 @@
     overflow: hidden;
 }
 
-/* Effet visuel au survol de la souris */
-.card:hover {
-    border-color: #444;
-}
+
 
 /* ==========================================================
    BOUTONS : Style des éléments interactifs
@@ -48,12 +45,6 @@
     margin-left: auto;
 }
 
-/* Conteneur pour grouper les boutons d'action (ex: Modifier/Supprimer) */
-.btn-actions {
-    margin-top: 20px;
-    display: flex;
-    gap: 15px;
-}
 
 /* Liens d'action spécifiques */
 .btn-edit, .btn-supprimer {
