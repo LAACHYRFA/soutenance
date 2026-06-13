@@ -27,10 +27,7 @@
     gap: 20px;
 }
 
-/* Permet à un élément de prendre toute la largeur de la grille */
-.full-width {
-    grid-column: 1 / -1;
-}
+
 
 /* Conteneur pour chaque champ de saisie */
 .form-group {
@@ -88,10 +85,6 @@
     margin-top: 15px;
 }
 
-.btn-submit:hover {
-    opacity: 0.9;
-}
-
 /* Style du lien d'annulation */
 .btn-cancel {
     display: inline-block;
@@ -133,10 +126,7 @@
     border-top: 1px solid #252525;
 }
 
-/* Effet de survol sur les lignes du tableau */
-.data-table tr:hover {
-    background-color: #222;
-}
+
 
 /* Boutons d'actions dans le tableau */
 .btn-edit {
